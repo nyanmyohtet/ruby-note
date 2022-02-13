@@ -1,5 +1,7 @@
 # Rails Getting Start
 
+## [WIP](https://gorails.com/episodes/rails-for-beginners-part-13-creating-a-sign-up-form)
+
 ## Tutorials
 
 [Learn Ruby on Rails for Beginners](https://gorails.com/start)
@@ -106,6 +108,25 @@ rails server
 rails s
 ```
 
+## Creating the User Model
+
+```bash
+$ rails generate model User email:string password_digest:string
+Running via Spring preloader in process 1780
+      invoke  active_record
+      create    db/migrate/20220213093037_create_users.rb
+      create    app/models/user.rb
+      invoke    test_unit
+      create      test/models/user_test.rb
+      create      test/fixtures/users.yml
+$ rails db:migrate
+Running via Spring preloader in process 1818
+== 20220213093037 CreateUsers: migrating ======================================
+-- create_table(:users)
+   -> 0.0028s
+== 20220213093037 CreateUsers: migrated (0.0034s) =============================
+```
+
 ## Misc
 
 Remove all installed gems:
@@ -113,3 +134,15 @@ Remove all installed gems:
 ```bash
 for x in `gem list --no-versions`; do gem uninstall $x -a -x -I; done
 ```
+
+Entering rails console mode:
+
+`$ rails console`
+
+Reloading rails app in console mode:
+
+`irb(main):001:0> reload!`
+
+## Websites
+
+[Rubular](https://rubular.com) - a Ruby regular expression editor
