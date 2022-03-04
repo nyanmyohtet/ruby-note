@@ -1,6 +1,6 @@
 # Rails Getting Start
 
-## [WIP](https://gorails.com/episodes/rails-for-beginners-part-13-creating-a-sign-up-form)
+## [WIP] [Rails for Beginners Part 17: Login Form](https://gorails.com/episodes/rails-for-beginners-part-17-login-form)
 
 ## Tutorials
 
@@ -46,10 +46,19 @@ echo 'export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"' >> ~/.bashrc
 exec $SHELL
 ```
 
-To install Ruby and set the default version, we'll run the following commands:
+To install Ruby and set the default version:
 
 ```bash
+# list latest stable versions:
+rbenv install -l
+
+# list all local versions:
+rbenv install -L
+
+# install a Ruby version:
 rbenv install 3.0.3
+
+# set Ruby version:
 rbenv global 3.0.3
 ```
 
